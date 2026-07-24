@@ -957,6 +957,12 @@ header nav ul li a:hover {color:lightcoral;}
     font-weight: 600;
 }
 
+.icons_foot {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
 .title_web_foot #title_foot_last {
     color: #02102a;
     font-family: cursive;
@@ -1148,6 +1154,7 @@ header nav ul li a:hover {color:lightcoral;}
     color: aliceblue;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s;
@@ -1155,7 +1162,7 @@ header nav ul li a:hover {color:lightcoral;}
     right: 1rem;
     bottom: 1rem;
 }
-#symbol {transform: rotate(-90deg);}
+
 #scrollup:hover {background-color: #f08080e5;}
 
 /* Media Queries */
