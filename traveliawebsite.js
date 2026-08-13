@@ -17,6 +17,7 @@ let card_Mecidiye3 = document.getElementById("card_Mecidiye3");
 let card_Mecidiye4 = document.getElementById("card_Mecidiye4");
 let card_Mecidiye5 = document.getElementById("card_Mecidiye5");
 let card_Mecidiye6 = document.getElementById("card_Mecidiye6");
+let header = document.getElementById("header");
 menu.addEventListener("click", ()=> {show.style.right = "0";document.body.style.overflow = 'hidden';});
 closeX.addEventListener("click" , ()=> {show.style.right = "-100%";document.body.style.overflow = 'visible';});
 sign_up.onclick = ()=> {location.assign("signuppage.html");}
@@ -30,7 +31,10 @@ if(navigator.onLine) {console.log(navigator.onLine);console.log("Welcome to my w
 else {console.log(navigator.onLine);} 
 
 scrollup.onclick = ()=> {window.scroll({behavior : "smooth",top : 0});}
-
+window.addEventListener("scroll", ()=> {
+    if(window.scrollY > 100) {scrollup.style.visibility = "visible";header.style.position = "fixed";header.style.top = "0";header.style.right = "0";header.style.left = "0";header.style.zIndex = "1";}
+    else {scrollup.style.visibility = "hidden";}
+});
 const revealElements = document.querySelectorAll('.animate-on-scroll');
 const revealObserver = new IntersectionObserver(
   (entries) => {
